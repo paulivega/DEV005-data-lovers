@@ -7,7 +7,7 @@ import data from './data/pokemon/pokemon.js';
 console.log(card, data);
 
 //elementos del DOM
-const btnAll = document.getElementById('btn1');
+const btnAll = document.getElementById('btnAll');
 
 
 //Funcione que interactúan con el DOM
