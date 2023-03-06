@@ -1,6 +1,19 @@
-import { example } from './data.js';
+import { card } from './data.js';
+import pokemon from './data/pokemon/pokemon.js';
 // import data from './data/lol/lol.js';
 import data from './data/pokemon/pokemon.js';
 // import data from './data/rickandmorty/rickandmorty.js';
 
-console.log(example, data);
+console.log(card, data);
+
+//elementos del DOM
+const btnHOLA = document.getElementById('btn1');
+
+
+//Funcione que interactúan con el DOM
+//card(pokemon)
+//Eventos del DOM
+btnHOLA.addEventListener('click',card)
+
+//PRUEBAS
+console.log(pokemon)
