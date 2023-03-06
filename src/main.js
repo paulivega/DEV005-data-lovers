@@ -7,13 +7,13 @@ import data from './data/pokemon/pokemon.js';
 console.log(card, data);
 
 //elementos del DOM
-const btnHOLA = document.getElementById('btn1');
+const btnAll = document.getElementById('btn1');
 
 
 //Funcione que interactúan con el DOM
 //card(pokemon)
 //Eventos del DOM
-btnHOLA.addEventListener('click',card)
+btnAll.addEventListener('click',card)
 
 //PRUEBAS
 console.log(pokemon)
