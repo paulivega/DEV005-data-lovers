@@ -1,47 +1,81 @@
 <!DOCTYPE html>
 <html>
-<header>
-    <img src="./img/banner.jpg" alt="banner-pokemon">
-    <nav>
-      <ul>
-      <li>All</li>
-      <li>Type</li>
-        <ul id="type">
-          <li>Bug</li>
-          <li>Dark</li>
-          <li>Dragon</li>
-          <li>Electric</li>
-          <li>Fairy</li>
-          <li>Fighting</li>
-          <li>Fire</li>
-          <li>Flying</li>
-          <li>Ghost</li>
-          <li>Grass</li>
-          <li>Ground</li>
-          <li>Ice</li>
-          <li>Normal</li>
-          <li>Poison</li>
-          <li>Psychic</li>
-          <li>Rock</li>
-          <li>Steel</li>
-          <li>Water</li> 
-        </ul>
-      <li>Order By</li> 
-      <li>Search</li>
-    </ul>
-    </nav>
-</header>
+
 <head>
   <meta charset="utf-8">
   <title>Pokémon Data</title>
   <link rel="stylesheet" href="style.css" />
-  <link href="https://fonts.googleapis.com/css2?family=Iceland&family=Roboto:ital,wght@1,700&family=Space+Grotesk:wght@500&display=swap" rel="stylesheet">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Iceland&family=Roboto:ital,wght@1,700&family=Space+Grotesk:wght@500&display=swap"
+    rel="stylesheet">
 </head>
+
 <body>
+  <header>
+    <img src="./img/banner.png" alt="banner-pokemon">
+  </header>
+
+  <main class="menuContainer">
+    <section class="itemContainer">
+      <div class="item">
+        <button class="allPokemon"> All </button>
+      </div>
+    </section>
+    
+      <section class="itemContainer">
+        <div class="item">
+          <p id="title"> Type
+            <select id="typesPokemon">
+              <option value="Bug">Bug</option>
+              <option value="Dark">Dark</option>
+              <option value="Dragon">Dragon</option>
+              <option value="Electric">Electric</option>
+              <option value="Fairy">Fairy</option>
+              <option value="Fighting">Fighting</option>
+              <option value="Fire">Fire</option>
+              <option value="Flying">Flying</option>
+              <option value="Ghost">Ghost</option>
+              <option value="Grass">Grass</option>
+              <option value="Ground">Ground</option>
+              <option value="Ice">Ice</option>
+              <option value="Normal">Normal</option>
+              <option value="Poison">Poison</option>
+              <option value="Psychic">Psychic</option>
+              <option value="Rock">Rock</option>
+              <option value="Steel">Steel</option>
+              <option value="Water">Water</option>
+            </select>
+          </p>
+        </div>
+      </section>
+    
+    <section class="itemContainer">
+      <div class="item">
+        <p id="title"> Order By
+          <select id="orderBy">
+            <option value="num">Número</option>
+            <option value="cp">CP (Combat Points)</option>
+            <option value="hp">HP (Hit Points)</option>
+          </select>
+        </p>
+      </div>
+    </section>
+ 
+    
+
+  </main>
+ <!-- <section class="search">
+    <div class="search2">
+      <input type="search" id="searcher" placeholder="Ingrese su búsqueda " />
+      <img src="img/search.png" alt="search">
+    </div>
+  </section> -->
+
   <div id="root"></div>
-    <footer> ©️ C o p y r i g h t , 2023 - Proyecto Data Lovers 
-      (Sandra Tabares - Paulina Vega) - DEV005 - Laboratoria
+  <footer> ©️ C o p y r i g h t , 2023 - Proyecto Data Lovers
+    (Sandra Tabares - Paulina Vega) - DEV005 - Laboratoria
   </footer>
   <script src="main.js" type="module"></script>
 </body>
+
 </html>
