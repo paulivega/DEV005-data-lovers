@@ -1,0 +1,112 @@
+
+
+body {
+    font-family: "iceland";
+    
+}
+
+header {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 5px 0 5px 0;
+}
+
+.menuContainer {
+    display: inline-block;
+    margin: 5px 20px 5px 20px;
+    width: 100%;
+    align-items: center;
+}
+
+.itemContainer {
+   
+    float: left;
+    width: 30%;
+}
+
+.item {
+    text-align: center;
+    justify-content: center;
+}
+
+#title {
+    font-family: 'iceland';
+    font-weight: bold;
+}
+
+.allPokemon {
+    font-family: 'iceland';
+    margin-top: 10px;
+    background-color: #ffffff;
+    border-radius: 5px;
+    border: solid 1px #565757;
+    font-size: 16px;
+    height: 3em;
+    width: 30%;
+}
+
+.allPokemon:hover {
+    background-color: #ef0c3d;
+    color: #ffffff;
+}
+
+#typesPokemon {
+    font-family: 'iceland';
+    background-color: #ffffff;
+    border-radius: 5px;
+    border: solid 1px #565757;
+    font-size: 16px;
+    height: 3em;
+    width: 40%;
+}
+
+#orderBy {
+    font-family: 'iceland';
+    background-color: #ffffff;
+    border-radius: 5px;
+    border: solid 1px #565757;
+    font-size: 16px;
+    height: 3em;
+    width: 40%;
+}
+
+.search {
+    height: 40px;
+    width: 100%;
+    align-items: center;
+}
+
+.search .search2 {  
+    width: 30%;
+    min-width: 300px;
+    border-radius: 5px;
+    border: solid 1px #565757;
+    display:flex;
+    background-color: #ffffff;
+}
+
+.search img {
+    width: 35px;
+    margin: auto;
+}
+
+#searcher {
+    outline: 0;
+    border: none;
+    font-family: 'iceland';
+    text-align: center;
+}
+
+footer {
+    width: 100%;
+    font-size: 15px;
+    color: rgb(56, 54, 54);
+    background-color: #bcb4e7;
+    padding: 5px 0 5px 0;
+    text-align: center;
+    margin-top: 20px;
+    bottom: 0%;
+    position: absolute;
+}
