@@ -115,21 +115,23 @@ footer {
     
 }
 .card{
-    border: 2px solid red;
-    border-radius: 15px;
+    background-image: url("img/templatecard.png");
+    background-repeat: no-repeat;
+    border: 2px solid rgb(111, 0, 255);
+    border-radius: 25px;
     box-shadow: 0px 5px 5px red;
-    width: 260px;
-    height: 300px;
+    width: 211px;
+    height: 320px;
     margin: 10px 10px 10px 10px;
-    padding: 5px 5px 5px 5px;
+    padding: 5px 5px 5px 10px;
     display: flex;
     flex-direction: column;  
 }
 .image{
     border: 2px solid green;
-    width: 220px;
-    height: 180px;
-    margin: 0px 10px 10px 10px;
+    width: 180px;
+    height: 150px;
+    margin: 0px 10px 10px 4px;
     display: flex;
     flex-direction: row;
     justify-content: space-around;
@@ -137,6 +139,7 @@ footer {
 }
 .hitsP{
     border: 2px solid blue;
+    font-size: 20px;
     border-radius: 10px;
     width: 100px;
     height: 20px;
@@ -150,6 +153,7 @@ div{
 }
 .combatP{
     border: 2px solid orange;
+    font-size: 20px;
     border-radius: 10px;
     width: 100px;
     height: 20px;
@@ -160,12 +164,18 @@ div{
 }
 .pokeName{
     border: 2px solid rgb(255, 0, 225);
-    width: 220px;
+    font-size: 30px;
+    width: 180px;
     height: 20px;
     margin: 5px 10px 10px 10px;
     padding: 2px 2px 6px 2px;
     display: flex;
     flex-direction: row;
+}
+.counterContainer {
+    display: flex;
+    width: 80%;
+    margin: 0 40px 0 40px;
 }
 
     
