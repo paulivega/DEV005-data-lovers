@@ -88,6 +88,8 @@ const card = () => {
     // Section en el DOM
     const powersIcons = document.getElementById('section');
     card.insertBefore (powers, powersIcons);
+
+    
   }
 };
 
@@ -100,7 +102,9 @@ const card = () => {
 }
 */
 //Eventos del DOM
-btnAll.addEventListener('click',card)
+btnAll.addEventListener('click',card);
+
+
 
 //PRUEBAS
 console.log(data)
