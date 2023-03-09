@@ -91,6 +91,7 @@ const card = () => {
 
     
   }
+  document.getElementById("btnAll").disabled = true;
 };
 
 

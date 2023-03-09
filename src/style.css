@@ -1,9 +1,9 @@
 
 body {
-    font-family: "iceland";
-    position: relative;
-    
+    font-family: "iceland"; 
+   
 }
+
 header {
     width: 100%;
     display: flex;
@@ -12,88 +12,90 @@ header {
     margin: 5px 0 5px 0;
 }
 
-.menuContainer {
-    display: inline-block;
-    margin: 5px 20px 5px 20px;
-    width: 100%;
+nav {
+    width:100%;
+    justify-content:center;
+    display: flex;
     align-items: center;
-}
-.itemContainer {
-   
-    float: left;
-    width: 30%;
-
-}
-.item {
-    text-align: center;
-    justify-content: center;
+    gap: 10%;
 }
 
 #title {
-    font-size: 30px;
+    width: 4.5em ;
+    font-size: 33px;
     font-family: 'iceland';
     font-weight: bold;
+    
+ 
+    
 }
 
 .allPokemon {
-    font-family: 'iceland';
-    margin-top: 20px;
-    background-color: #ffffff;
-    border-radius: 5px;
-    border: solid 1px #565757;
-    font-size:30px;
-    height: 1.8em;
-    width: 30%;
-}
-.allPokemon:hover {
+    width: 5em;
+    font-family: 'iceland';   
     background-color: #ef0c3d;
-    color: #ffffff;
-}
-#typesPokemon {
-    font-family: 'iceland';
-    background-color: #ffffff;
     border-radius: 5px;
-    border: solid 1px #565757;
-    font-size: 16px;
-    height: 3em;
-    width: 40%;
+    border: solid 2px black;
+    font-size:35px;
 }
 
-#orderBy {
-    font-family: 'iceland';
+.allPokemon:hover {
     background-color: #ffffff;
+    color:black;
+}
+
+select {
+    width: 1em; 
+    height: 2.3em;
+    font-family: 'iceland';
+    color: white;
+    border: none;
     border-radius: 5px;
-    border: solid 1px #565757;
-    font-size: 16px;
-    height: 3em;
-    width: 40%;
+    background-color: #5d5a5b;
+    font-size: 20px;
 }
 
 .search {
     height: 40px;
     width: 100%;
+    justify-content:center;
+    display: flex;
     align-items: center;
+    
 }
 
-.search .search2 {  
-    width: 30%;
-    min-width: 300px;
-    border-radius: 5px;
-    border: solid 1px #565757;
-    display:flex;
-    background-color: #ffffff;
-}
-.search img {
-    width: 35px;
-    margin: auto;
-}
-#searcher {
-    outline: 0;
-    border: none;
+.search input {
+    color: #afb2b2;
+    width: 15em;
+    height: 1.7em;
+  
+    border:2px solid black;
+    border-radius: 0.3em 0 0 0.3em;
+    font-size: 20px;
     font-family: 'iceland';
-    text-align: center;
+}
+
+
+
+
+.search button{
+    
+    font-family: 'iceland';
+    background-color: #5d5a5b;
+    color: white;
+    font-size: 25px;
+    width: 8.8em;
+    height: 1.4em;
+    border:2px solid black;
+    border-radius:  0 0.3em 0.3em 0;
 
 }
+
+.search button:hover {
+    background-color: #ffffff;
+    color:black;
+}
+
 footer {
     width: 100%;
     font-size: 15px;
@@ -104,17 +106,15 @@ footer {
     margin-top: 20px;
     bottom: 0%;
     position: absolute;
-
 }
+
 #root {
     flex-wrap: wrap;
     justify-content:space-around;
     margin: 15px 15px 15px 100px;
-    padding: 20px 100px 20px 50px;
-    
-    
-    
+    padding: 20px 100px 20px 50px; 
 }
+
 .card{
     background-image: url("img/templatecard.png");
     background-repeat: no-repeat;
@@ -127,16 +127,16 @@ footer {
     display: flex;
     flex-direction: column;  
 }
-.image{
-    
+
+.image{    
     width: 180px;
     height: 120px;
     margin: 0px 5px 10px 4px;
     display: flex;
     flex-direction: row;
     justify-content: space-around;
-
 }
+
 .hitsP{
     border: 2px solid blue;
     font-size: 20px;
@@ -147,11 +147,12 @@ footer {
     padding: 2px 2px 6px 2px;
     display: flex;
     flex-direction:column;
-    
 }
+
 div{
     display: flex;
 }
+
 .combatP{
     border: 2px solid orange;
     font-size: 20px;
@@ -161,12 +162,9 @@ div{
     margin: 2px 5px 0 15px;
     padding: 2px 2px 4px 2px;
     display: flex;
-    
-    
 }
 
 .pokeName{
-   
     font-size: 35px;
     width: 180px;
     height: 20px;
@@ -175,11 +173,13 @@ div{
     display: flex;
     flex-direction: row;
 }
+
 .counterContainer {
     display: flex;
     width: 80%;
     margin: 0 40px 0 40px;
 }
+
 .powers{
     border: 2px solid rgb(80, 178, 226);
     font-size: 20px;
@@ -192,5 +192,5 @@ div{
     flex-direction: row;
 }
 
-    
+
 
