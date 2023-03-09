@@ -1,8 +1,8 @@
 
 // estas funciones son de ejemplo
-export const hola = () => {
-  
-  return 'example';
+export const filterBug = (a) => {
+  const filterBugs = a.filter(pokemonBug=> pokemonBug.type.includes('bug'));
+  return filterBugs;
 };
 
 export const anotherExample = () => {

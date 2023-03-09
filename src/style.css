@@ -1,7 +1,6 @@
 
 body {
     font-family: "iceland"; 
-   
 }
 
 header {
@@ -25,9 +24,6 @@ nav {
     font-size: 33px;
     font-family: 'iceland';
     font-weight: bold;
-    
- 
-    
 }
 
 .allPokemon {
@@ -61,25 +57,19 @@ select {
     justify-content:center;
     display: flex;
     align-items: center;
-    
 }
 
 .search input {
     color: #afb2b2;
     width: 15em;
     height: 1.7em;
-  
     border:2px solid black;
     border-radius: 0.3em 0 0 0.3em;
     font-size: 20px;
     font-family: 'iceland';
 }
 
-
-
-
 .search button{
-    
     font-family: 'iceland';
     background-color: #5d5a5b;
     color: white;
@@ -88,7 +78,6 @@ select {
     height: 1.4em;
     border:2px solid black;
     border-radius:  0 0.3em 0.3em 0;
-
 }
 
 .search button:hover {

@@ -1,4 +1,4 @@
-//import {card} from './data.js';
+import {filterBug} from './data.js';
 // import data from './data/lol/lol.js';
 import data from './data/pokemon/pokemon.js';
 
@@ -6,10 +6,14 @@ import data from './data/pokemon/pokemon.js';
 
 //elementos del DOM
 const btnAll = document.getElementById('btnAll');
+const btnBug = document.getElementById('btnBug');
+//Variables que interactuan con las funciones
 const allPokemons = data.pokemon;
+const bugs = (filterBug(allPokemons));
 
 
-//Funcione que interactúan con el DOM
+
+//Funciones que interactúan con el DOM
 //card(pokemon)
 const card = () => {
   for(let i = 0; i<allPokemons.length; i++){
@@ -94,20 +98,18 @@ const card = () => {
   document.getElementById("btnAll").disabled = true;
 };
 
-
-/*function showPokemons(allPokemons){
-  for(let i = 0; i <allPokemons.length; i= i+1){
-    console.log(data[i].num)
-  }
-
-}
-*/
 //Eventos del DOM
 btnAll.addEventListener('click',card);
+//btnBug.addEventListener('click', card(bugs));
+
+//Función de filtrado
+console.log(bugs);
 
 
+
+//console.log(filterBug(allPokemons));
 
 //PRUEBAS
-console.log(data)
+//console.log(data)
 //console.log(data.pokemon[0].num)
 //console.log(allPokemons[0].num)
