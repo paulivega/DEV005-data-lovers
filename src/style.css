@@ -20,7 +20,8 @@ nav {
 }
 
 #title {
-    width: 4.5em ;
+    display:flex;
+    width: 5.6em ;
     font-size: 33px;
     font-family: 'iceland';
     font-weight: bold;
@@ -41,14 +42,15 @@ nav {
 }
 
 select {
-    width: 1em; 
-    height: 2.3em;
+    margin-left: 0.5em;
+    width: 4.4em; 
+    height: 2.5em;
     font-family: 'iceland';
     color: white;
     border: none;
     border-radius: 5px;
     background-color: #5d5a5b;
-    font-size: 20px;
+    font-size: 18px;
 }
 
 .search {
@@ -60,7 +62,8 @@ select {
 }
 
 .search input {
-    color: #afb2b2;
+    color: #19054c;
+    font-weight: bold;
     width: 15em;
     height: 1.7em;
     border:2px solid black;

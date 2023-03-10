@@ -1,4 +1,5 @@
-import {filter} from './data.js';
+
+import {filterTypePoke} from './data.js';
 // import data from './data/lol/lol.js';
 import data from './data/pokemon/pokemon.js';
 
@@ -9,7 +10,7 @@ const btnAll = document.getElementById('btnAll');
 const typesPokes = document.getElementById('typesPokemon');
 //Variables que interactuan con las funciones
 const allPokemons = data.pokemon;
-const bugs = (filter(allPokemons));
+const containerCards = document.getElementById('root');
 
 
 
@@ -96,7 +97,7 @@ const card = (pokes) => {
 
     
   }
-  document.getElementById("btnAll").disabled = true;
+  //document.getElementById("btnAll").disabled = true;
 };
 
 //Función para mostrar todos los Pokemons
@@ -104,26 +105,14 @@ const showAll=() => {
   card(allPokemons)
 }
 
-const showBug=() => {
-  card(bugs)
-}
-
 //Eventos del DOM
 btnAll.addEventListener('click',showAll);
 
-typesPokes.addEventListener('change', (event) => {
-  const typeValue = event.target.value;
-  card(typeValue);
-});   
-//console.log(filterByType(allPokemons, bugs));
-//Función de filtrado
-
-
-
-
-//console.log(filterBug(allPokemons));
-
-//PRUEBAS
-//console.log(data)
-//console.log(data.pokemon[0].num)
-//console.log(allPokemons[0].num)
+//Función evento selección Tipo Pokemon
+typesPokes.addEventListener('change', () => {
+ 
+  const pokeFilter = filterTypePoke(allPokemons, typesPokes.value); //Variable que llama a función 'filterTypePoke' con argumentos y filtra según el seleccionado 'typesPokes'
+  containerCards.innerHTML = ''; //se creo variable 'containerCards' para capturar 'root'
+  card(pokeFilter);
+  
+});
