@@ -15,8 +15,8 @@ const bugs = (filterBug(allPokemons));
 
 //Funciones que interactúan con el DOM
 //card(pokemon)
-const card = () => {
-  for(let i = 0; i<allPokemons.length; i++){
+const card = (pokes) => {
+  for(let i = 0; i<pokes.length; i++){
 
 
     // crea una section
@@ -24,7 +24,7 @@ const card = () => {
     //entrego class a la section
     card.className = 'card';
     // y añade contenido
-    const numero = document.createTextNode(allPokemons[i].num);
+    const numero = document.createTextNode(pokes[i].num);
     //añade texto al section creado.
     card.appendChild(numero); 
     // añade el elemento creado y su contenido al DOM
@@ -35,7 +35,7 @@ const card = () => {
     const image = document.createElement('img');
     //clase
     image.className = 'image';
-    image.src=allPokemons[i].img;
+    image.src=pokes[i].img;
     const cardImage = document.getElementById('section');
     //inserto image adentro de card
     card.insertBefore(image,cardImage)
@@ -46,7 +46,7 @@ const card = () => {
     //clase
     name.className = 'pokeName'
     //crear texto
-    const nameText = document.createTextNode(allPokemons[i].name);
+    const nameText = document.createTextNode(pokes[i].name);
     //agregar text a section
     name.appendChild(nameText);
     //section al DOM
@@ -60,7 +60,7 @@ const card = () => {
     hits.className = 'hitsP';
     console.log(hits)
     //agregar text 
-    const valorHP = document.createTextNode('HP = '+ allPokemons[i].stats['max-hp']);
+    const valorHP = document.createTextNode('HP = '+ pokes[i].stats['max-hp']);
     //agregar text a la section
     hits.appendChild(valorHP);
     console.log(hits)
@@ -73,7 +73,7 @@ const card = () => {
     //clase
     combat.className = 'combatP';
     //crear texto
-    const valorCP = document.createTextNode('CP = '+ allPokemons[i].stats['max-cp']);
+    const valorCP = document.createTextNode('CP = '+ pokes[i].stats['max-cp']);
     //agregar text a section
     combat.appendChild(valorCP);
     console.log(combat);
@@ -86,7 +86,7 @@ const card = () => {
     //Clase
     powers.className = 'powers';
     //Crear texto
-    const valorPower = document.createTextNode (allPokemons[i].type);
+    const valorPower = document.createTextNode (pokes[i].type);
     //Agregar texto a Section
     powers.appendChild(valorPower);
     // Section en el DOM
@@ -98,8 +98,13 @@ const card = () => {
   document.getElementById("btnAll").disabled = true;
 };
 
+//Función para mostrar todos los Pokemons
+const showAll=() => {
+  card(allPokemons)
+}
+
 //Eventos del DOM
-btnAll.addEventListener('click',card);
+btnAll.addEventListener('click',showAll);
 //btnBug.addEventListener('click', card(bugs));
 
 //Función de filtrado
