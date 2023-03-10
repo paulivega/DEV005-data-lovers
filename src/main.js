@@ -1,4 +1,4 @@
-import {filterBug} from './data.js';
+import {filter} from './data.js';
 // import data from './data/lol/lol.js';
 import data from './data/pokemon/pokemon.js';
 
@@ -6,10 +6,11 @@ import data from './data/pokemon/pokemon.js';
 
 //elementos del DOM
 const btnAll = document.getElementById('btnAll');
-const btnBug = document.getElementById('btnBug');
+const typesPokes = document.getElementById('typesPokemon');
 //Variables que interactuan con las funciones
 const allPokemons = data.pokemon;
-const bugs = (filterBug(allPokemons));
+const bugs = (filter(allPokemons));
+
 
 
 
@@ -103,12 +104,20 @@ const showAll=() => {
   card(allPokemons)
 }
 
+const showBug=() => {
+  card(bugs)
+}
+
 //Eventos del DOM
 btnAll.addEventListener('click',showAll);
-//btnBug.addEventListener('click', card(bugs));
 
+typesPokes.addEventListener('change', (event) => {
+  const typeValue = event.target.value;
+  card(typeValue);
+});   
+//console.log(filterByType(allPokemons, bugs));
 //Función de filtrado
-console.log(bugs);
+
 
 
 
