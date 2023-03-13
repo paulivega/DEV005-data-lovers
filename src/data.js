@@ -1,4 +1,3 @@
-
 // estas funciones son de ejemplo
 export const filterTypePoke = (a,selecType) => {
   let filterTypes = [];
@@ -6,18 +5,24 @@ export const filterTypePoke = (a,selecType) => {
   return filterTypes;
 };
 
-//Función ordenar
+//Función ordenar por CP
 
-export const filterOrderPoke = (b) => {
+export const filterOrderPoke = (b,selectOrder) => {
   let filterOrder = [];
-  // eslint-disable-next-line no-undef
   filterOrder = b.sort((function (a,b) {
-    if (a.stats['max-cp'] > b.stats['max-cp']){
+    if (parseInt(a.stats[selectOrder]) > parseInt(b.stats[selectOrder])){
       return 1;
-    } if (a.stats['max-cp'] < b.stats['max-cp']){
+    } if (parseInt(a.stats[selectOrder]) < parseInt(b.stats[selectOrder])){
       return -1;
     }
     return 0;
   } ));
   return filterOrder;
 };
+export const filterNamePoke = (a,selectName) => {
+  let filterName = [];
+  filterName = a.filter(pokemonName=> pokemonName.name.includes(selectName));
+  return filterName;
+};
+
+

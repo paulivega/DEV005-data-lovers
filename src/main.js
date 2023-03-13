@@ -1,27 +1,23 @@
-
+//funciones importadas desde .data
 import {filterTypePoke} from './data.js';
 import {filterOrderPoke} from './data.js';
-// import data from './data/lol/lol.js';
+import { filterNamePoke } from './data.js';
 import data from './data/pokemon/pokemon.js';
-
-//console.log(card, data);
 
 //elementos del DOM
 const btnAll = document.getElementById('btnAll');
 const typesPokes = document.getElementById('typesPokemon');
 const orderPokes = document.getElementById('orderBy');
+const inputSearch = document.getElementById('inputSearch');
+const btnSearch = document.getElementById('btnSearch');
 //Variables que interactuan con las funciones
 const allPokemons = data.pokemon;
 const containerCards = document.getElementById('root');
-console.log(orderPokes);
-
-
 
 //Funciones que interactúan con el DOM
-//card(pokemon)
+//Función que crea las cards
 const card = (pokes) => {
   for(let i = 0; i<pokes.length; i++){
-
     // crea una section
     const card = document.createElement('section');
     //entrego class a la section
@@ -33,7 +29,6 @@ const card = (pokes) => {
     // añade el elemento creado y su contenido al DOM
     const cardFrame = document.getElementById('section');
     document.getElementById('root').insertBefore(card, cardFrame);
-
     //crea section image
     const image = document.createElement('img');
     //clase
@@ -43,7 +38,6 @@ const card = (pokes) => {
     //inserto image adentro de card
     card.insertBefore(image,cardImage)
     //cardImage.appendChild(cardFrame)
-  
     //crea section Name
     const name = document.createElement('section');
     //clase
@@ -55,7 +49,6 @@ const card = (pokes) => {
     //section al DOM
     const pokeName = document.getElementById('section');
     card.insertBefore(name,pokeName);
-  
     //crea section HP
     const hits = document.createElement('section');
     console.log(hits)
@@ -70,7 +63,6 @@ const card = (pokes) => {
     //section aparezca Dom
     const hitsPoints = document.getElementById('section');
     card.insertBefore(hits,hitsPoints)
-  
     // crea section CP
     const combat = document.createElement('section');
     //clase
@@ -83,7 +75,6 @@ const card = (pokes) => {
     //section aparezca DOM
     const combatPoints = document.getElementById('section');
     card.insertBefore(combat,combatPoints);
-
     // Crear section poderes
     const powers = document.createElement('section');
     //Clase
@@ -95,34 +86,34 @@ const card = (pokes) => {
     // Section en el DOM
     const powersIcons = document.getElementById('section');
     card.insertBefore (powers, powersIcons);
-
   }
-  //document.getElementById("btnAll").disabled = true;
 };
 
 //Función para mostrar todos los Pokemons
 const showAll=() => {
+  containerCards.innerHTML = '';
   card(allPokemons)
-  document.getElementById("btnAll").disabled = true;
 }
-
-//Eventos del DOM
-btnAll.addEventListener('click',showAll);
-
 //Función evento selección Tipo Pokemon
 typesPokes.addEventListener('change', () => {
- 
   const pokeFilter = filterTypePoke(allPokemons, typesPokes.value); //Variable que llama a función 'filterTypePoke' con argumentos y filtra según el seleccionado 'typesPokes'
   containerCards.innerHTML = ''; //se creo variable 'containerCards' para capturar 'root'
   card(pokeFilter);
-  
 });
-
 //Función evento selección Orden por CP Y HP Pokemon
 orderPokes.addEventListener('change', () => {
- 
   const pokeOrder = filterOrderPoke(allPokemons, orderPokes.value); //Variable que llama a función 'filterTypePoke' con argumentos y filtra según el seleccionado 'typesPokes'
   containerCards.innerHTML = ''; //se creo variable 'containerCards' para capturar 'root'
   card(pokeOrder);
-  console.log(pokeOrder);
 });
+//Función evento selección Pokemon nombre
+btnSearch.addEventListener('click', () => {
+  const pokeName = filterNamePoke(allPokemons, inputSearch.value); //Variable que llama a función 'filterTypePoke' con argumentos y filtra según el seleccionado 'typesPokes'
+  containerCards.innerHTML = ''; //se creo variable 'containerCards' para capturar 'root'
+  card(pokeName);
+});
+
+
+console.log(typesPokes)
+//Eventos del DOM
+btnAll.addEventListener('click',showAll); 
