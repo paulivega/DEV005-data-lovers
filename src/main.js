@@ -1,5 +1,6 @@
 
 import {filterTypePoke} from './data.js';
+import {filterOrderPoke} from './data.js';
 // import data from './data/lol/lol.js';
 import data from './data/pokemon/pokemon.js';
 
@@ -8,10 +9,11 @@ import data from './data/pokemon/pokemon.js';
 //elementos del DOM
 const btnAll = document.getElementById('btnAll');
 const typesPokes = document.getElementById('typesPokemon');
+const orderPokes = document.getElementById('orderBy');
 //Variables que interactuan con las funciones
 const allPokemons = data.pokemon;
 const containerCards = document.getElementById('root');
-
+console.log(orderPokes);
 
 
 
@@ -114,4 +116,13 @@ typesPokes.addEventListener('change', () => {
   containerCards.innerHTML = ''; //se creo variable 'containerCards' para capturar 'root'
   card(pokeFilter);
   
+});
+
+//Función evento selección Orden por CP Y HP Pokemon
+orderPokes.addEventListener('change', () => {
+ 
+  const pokeOrder = filterOrderPoke(allPokemons, orderPokes.value); //Variable que llama a función 'filterTypePoke' con argumentos y filtra según el seleccionado 'typesPokes'
+  containerCards.innerHTML = ''; //se creo variable 'containerCards' para capturar 'root'
+  card(pokeOrder);
+  console.log(pokeOrder);
 });
