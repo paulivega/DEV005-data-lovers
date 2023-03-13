@@ -1,6 +1,8 @@
 
 body {
-    font-family: "iceland"; 
+    font-family: "iceland";
+    min-width: 100vh; 
+    position: relative;
 }
 
 header {
