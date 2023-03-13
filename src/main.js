@@ -20,7 +20,6 @@ const containerCards = document.getElementById('root');
 const card = (pokes) => {
   for(let i = 0; i<pokes.length; i++){
 
-
     // crea una section
     const card = document.createElement('section');
     //entrego class a la section
@@ -95,7 +94,6 @@ const card = (pokes) => {
     const powersIcons = document.getElementById('section');
     card.insertBefore (powers, powersIcons);
 
-    
   }
   //document.getElementById("btnAll").disabled = true;
 };
@@ -103,6 +101,7 @@ const card = (pokes) => {
 //Función para mostrar todos los Pokemons
 const showAll=() => {
   card(allPokemons)
+  document.getElementById("btnAll").disabled = true;
 }
 
 //Eventos del DOM
