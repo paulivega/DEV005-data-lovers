@@ -86,6 +86,8 @@ const card = (pokes) => {
     // Section en el DOM
     const powersIcons = document.getElementById('section');
     card.insertBefore (powers, powersIcons);
+    
+    
   }
 };
 
@@ -108,7 +110,7 @@ orderPokes.addEventListener('change', () => {
 });
 //Función evento selección Pokemon nombre
 btnSearch.addEventListener('click', () => {
-  const pokeName = filterNamePoke(allPokemons, inputSearch.value); //Variable que llama a función 'filterTypePoke' con argumentos y filtra según el seleccionado 'typesPokes'
+  const pokeName = filterNamePoke(allPokemons, inputSearch.value.toLowerCase()); //Variable que llama a función 'filterTypePoke' con argumentos y filtra según el seleccionado 'typesPokes'
   containerCards.innerHTML = ''; //se creo variable 'containerCards' para capturar 'root'
   card(pokeName);
 });
