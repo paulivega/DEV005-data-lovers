@@ -1,8 +1,8 @@
-
 body {
     font-family: "iceland";
     min-width: 100vh; 
     position: relative;
+    background-image: url(./img/backgroundPokemon1.jpg);
 }
 
 header {
@@ -120,6 +120,7 @@ footer {
     padding: 15px 0 5px 17px;
     display: flex;
     flex-direction: column;  
+    cursor: pointer;
 }
 
 .image{    
@@ -185,6 +186,3 @@ div{
     display: flex;
     flex-direction: row;
 }
-
-
-
