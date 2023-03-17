@@ -220,18 +220,13 @@ div {
 
 @media screen and (min-width: 481px) and (max-width: 767px) {
 
-    header {
-        width: 100%;
-        justify-self: center;
-        margin-bottom: 1.5em;
-        *background-image: url(./img/banner3.png);
-    }
-
     body {
-        width: 100vw;
-        align-items: center;
-        justify-content: center;
-        *border: 0.2em solid yellow;
+        margin: 0.5em 0 0.5em 0;
+        width: 100%;
+    }
+    .banner {
+        width: 98%;
+        justify-self: center;
     }
 
     nav {
@@ -241,11 +236,11 @@ div {
         flex-direction: row;
         justify-content: center;
         gap: 5%;
-    }
+    } 
 
-    .banner {
-        width: 100%;
-        justify-self: center;
+    .card {       
+        margin: 10px 20px 50px 0;
+        padding: 15px 10px 5px 15px;      
     }
 
     .search {
@@ -267,12 +262,14 @@ div {
 
     select {       
         font-size: 18px;
+        width: 5em;
     }
 
     option {
-        font-size: 10px;
-        width: 5em;
+        font-size: 16px;
+        width: 3em;
     }
+   
 }
 
 @media screen and (max-width: 480px) {
