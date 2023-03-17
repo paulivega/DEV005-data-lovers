@@ -285,13 +285,14 @@ div {
     }
 
     nav {
-        display: flex;
+        display:flex;
         width: 100%;
         align-items: center;
         flex-direction: column;       
     } 
 
     .allPokemon {
+        width: 7em;
         margin-bottom: 1em;
     }
 
