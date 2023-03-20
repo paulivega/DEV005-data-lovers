@@ -1,6 +1,6 @@
 //funciones importadas desde .data
 import {filterTypePoke} from './data.js';
-import {filterOrderPoke} from './data.js';
+import {sortOrderPoke} from './data.js';
 import { filterNamePoke } from './data.js';
 import data from './data/pokemon/pokemon.js';
 
@@ -51,15 +51,12 @@ const card = (pokes) => {
     card.insertBefore(name,pokeName);
     //crea section HP
     const hits = document.createElement('section');
-    console.log(hits)
     //darle clase
     hits.className = 'hitsP';
-    console.log(hits)
     //agregar text 
     const valorHP = document.createTextNode('HP = '+ pokes[i].stats['max-hp']);
     //agregar text a la section
     hits.appendChild(valorHP);
-    console.log(hits)
     //section aparezca Dom
     const hitsPoints = document.getElementById('section');
     card.insertBefore(hits,hitsPoints)
@@ -71,7 +68,6 @@ const card = (pokes) => {
     const valorCP = document.createTextNode('CP = '+ pokes[i].stats['max-cp']);
     //agregar text a section
     combat.appendChild(valorCP);
-    console.log(combat);
     //section aparezca DOM
     const combatPoints = document.getElementById('section');
     card.insertBefore(combat,combatPoints);
@@ -86,8 +82,6 @@ const card = (pokes) => {
     // Section en el DOM
     const powersIcons = document.getElementById('section');
     card.insertBefore (powers, powersIcons);
-    
-    
   }
 };
 
@@ -104,7 +98,7 @@ typesPokes.addEventListener('change', () => {
 });
 //Función evento selección Orden por CP Y HP Pokemon
 orderPokes.addEventListener('change', () => {
-  const pokeOrder = filterOrderPoke(allPokemons, orderPokes.value); //Variable que llama a función 'filterTypePoke' con argumentos y filtra según el seleccionado 'typesPokes'
+  const pokeOrder = sortOrderPoke(allPokemons, orderPokes.value); //Variable que llama a función 'sortOrderPoke' con argumentos y realiza sort según valores cp y hp.
   containerCards.innerHTML = ''; //se creo variable 'containerCards' para capturar 'root'
   card(pokeOrder);
 });
@@ -115,7 +109,6 @@ btnSearch.addEventListener('click', () => {
   card(pokeName);
 });
 
-
-console.log(typesPokes)
 //Eventos del DOM
 btnAll.addEventListener('click',showAll); 
+console.log(data.pokemon)

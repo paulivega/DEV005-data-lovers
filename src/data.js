@@ -6,10 +6,9 @@ export const filterTypePoke = (a,selecType) => {
 };
 
 //Función ordenar por CP
-
-export const filterOrderPoke = (b,selectOrder) => {
-  let filterOrder = [];
-  filterOrder = b.sort((function (a,b) {
+export const sortOrderPoke = (b,selectOrder) => {
+  let sortOrder = [];
+  sortOrder = b.sort((function (a,b) {
     if (parseInt(a.stats[selectOrder]) > parseInt(b.stats[selectOrder])){
       return 1;
     } if (parseInt(a.stats[selectOrder]) < parseInt(b.stats[selectOrder])){
@@ -17,7 +16,7 @@ export const filterOrderPoke = (b,selectOrder) => {
     }
     return 0;
   } ));
-  return filterOrder;
+  return sortOrder;
 };
 export const filterNamePoke = (a,selectName) => {
   let filterName = [];
