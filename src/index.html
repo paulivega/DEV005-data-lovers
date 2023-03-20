@@ -8,16 +8,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta charset="utf-8">
     <title>Pokémon Data</title>
-    
   </head>
-
   <body>
     <header>
       <img class="banner" src="./img/banner.png" alt="banner-pokemon">
     </header>
     <nav class="menuContainer">
       <button class="allPokemon" id="btnAll"> All </button>
-      <p id="title"> Types
+      <p class="title"> Types
         <select id="typesPokemon">
           <option disabled selected > Choose </option>
           <option value="bug" id="btnBug">Bug</option>
@@ -40,7 +38,7 @@
           <option value="water" id="btnWater">Water</option>
         </select>
       </p>
-      <p id="title"> Order
+      <p class="title"> Order
         <select id="orderBy">
           <option disabled selected>Choose</option>
           <option value="max-cp" id="max-cp">Combat Points</option>
@@ -52,21 +50,13 @@
       <p class="Pokemones"> "Pokemones (" <spam id="quantity"> 251 </spam> ")" </p>
     </section>-->
     <section class="search">
-      
         <input type="text" id="inputSearch" placeholder="Look for your pokemon"/>
         <button class="btnSearch" id="btnSearch">Search</button> 
-      
-    </section> 
-
+    </section>
     <div id="root"></div>
     <footer> ©️ C o p y r i g h t , 2023 - Proyecto Data Lovers
       (Sandra Tabares - Paulina Vega) - DEV005 - Laboratoria
     </footer>
-   
-
     <script src="main.js" type="module"></script>
   </body>
-
-
-
 </html>

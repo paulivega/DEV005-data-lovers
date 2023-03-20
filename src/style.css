@@ -188,8 +188,6 @@ div {
 }
 /*Resolución tablet 768 - 1024*/
 @media screen and (min-width: 768px) and (max-width: 1023px){
-  
-
     body {
         margin: 0.5em 0 0.5em 0;
         width: 100%;
@@ -198,28 +196,22 @@ div {
         width: 98%;
         justify-self: center;
     }
-
     .card {       
         margin: 10px 20px 50px 0;
         padding: 15px 10px 5px 15px;      
     }
-
     .search {
         margin-top:3.5em;  
     }
-
     select {       
         font-size: 18px;
     }
-
     option {
         font-size: 16px;
         width: 3em;
     }
 }
-
 @media screen and (min-width: 481px) and (max-width: 767px) {
-
     body {
         margin: 0.5em 0 0.5em 0;
         width: 100%;
@@ -228,7 +220,6 @@ div {
         width: 98%;
         justify-self: center;
     }
-
     nav {
         display: inline-block;
         width: 100%;
@@ -237,43 +228,34 @@ div {
         justify-content: center;
         gap: 5%;
     } 
-
     .card {       
         margin: 10px 20px 50px 0;
         padding: 15px 10px 5px 15px;      
     }
-
     .search {
         margin-top: 1.2em;
         display: flex;
         flex-direction: column;
         justify-content: center;
     }
-
     .search input {
         font-size: 20px;
         border-radius: 0.3em;
         margin-bottom: 0.7em;
     }
-
     .search button {
         border-radius: 0.3em;
     }
-
     select {       
         font-size: 18px;
         width: 5em;
     }
-
     option {
         font-size: 16px;
         width: 3em;
     }
-   
 }
-
 @media screen and (max-width: 480px) {
-
     body {
         justify-content: center;
         margin: 0.5em 0 0.5em 0;
@@ -283,47 +265,39 @@ div {
         width: 98%;
         justify-self: center;
     }
-
     nav {
         display:flex;
         width: 100%;
         align-items: center;
         flex-direction: column;       
     } 
-
     .allPokemon {
         width: 7em;
         margin-bottom: 1em;
     }
-
     .card {       
         margin: 10px 20px 50px 0;
         padding: 15px 10px 5px 15px;      
     }
-
     .search {
         margin-top: 1.2em;
         display: flex;
         flex-direction: column;
         justify-content: center;
     }
-
     .search input {
         font-size: 20px;
         border-radius: 0.3em;
         margin-bottom: 0.7em;
     }
-
     .search button {
         border-radius: 0.3em;
     }
-
     select {       
         font-size: 18px;
         width: 5em;
         margin-bottom: 1em;
     }
-
     option {
         font-size: 16px;
         width: 3em;
