@@ -1,5 +1,15 @@
-import { sortOrderPoke, filterTypePoke } from '../src/data.js';
-//Test para función filter Poke
+import { sortOrderPoke, filterTypePoke, filterNamePoke } from '../src/data.js';
+//Array 4 elements
+const Pokis = [
+  { "num": "001", "name": "bulbasaur", "type": ["grass", "poison"], "stats": { "max-cp": "1115", "max-hp": "113" } },
+  { "num": "021", "name": "spearow", "type": ["normal", "flying"], "stats": { "max-cp": "798", "max-hp": "106" } },
+  { "num": "025", "name": "pikachu", "type": ["electric"], "stats": { "max-cp": "938", "max-hp": "99" } },
+  { "num": "148", "name": "dragonair", "type": ["dragon"], "stats": { "max-cp": "1780", "max-hp": "135" } }];
+//Array 1 element
+const Pokis1 = [
+  { "num": "001", "name": "bulbasaur", "type": ["grass", "poison"], "stats": { "max-cp": "1115", "max-hp": "113" } }]
+
+//Test para función filter Poke  
 describe('filterTypePoke', () => {
   //a. función exista
   it('exist', () => {
@@ -11,11 +21,6 @@ describe('filterTypePoke', () => {
   });
   //c.función filtre un pokemon por categoría
   //c.1 crear arreglo de prueba
-  const Pokis = [
-    { "num": "001", "name": "bulbasaur", "type": ["grass", "poison"], "stats": { "max-cp": "1115", "max-hp": "113" } },
-    { "num": "021", "name": "spearow", "type": ["normal", "flying"], "stats": { "max-cp": "798", "max-hp": "106" } },
-    { "num": "025", "name": "pikachu", "type": ["electric"], "stats": { "max-cp": "938", "max-hp": "99" } },
-    { "num": "148", "name": "dragonair", "type": ["dragon"], "stats": { "max-cp": "1780", "max-hp": "135" } }];
   //c.2 Lo que hará  la función
   it('filter Pokemon by Type (grass)', () => {
     //c3 función con sus parámetros.igual(lo que devolverá cuando se cumpla la condición de la función)
@@ -27,6 +32,10 @@ describe('filterTypePoke', () => {
     expect(filterTypePoke(Pokis, 'flying')).toEqual(
       [{ "num": "021", "name": "spearow", "type": ["normal", "flying"], "stats": { "max-cp": "798", "max-hp": "106" } }]);
   });
+  it('filter Pokemon, the array has 1 element', () => {
+    expect(filterTypePoke(Pokis1, 'poison')).toEqual(
+      [{ "num": "001", "name": "bulbasaur", "type": ["grass", "poison"], "stats": { "max-cp": "1115", "max-hp": "113" } }])
+  })
 });
 
 describe('sortOrderPoke', () => {
@@ -40,11 +49,6 @@ describe('sortOrderPoke', () => {
   });
   //c.función filtre un pokemon por categoría
   //c.1 crear arreglo de prueba
-  const Pokis = [
-    { "num": "001", "name": "bulbasaur", "type": ["grass", "poison"], "stats": { "max-cp": "1115", "max-hp": "113" } },
-    { "num": "021", "name": "spearow", "type": ["normal", "flying"], "stats": { "max-cp": "798", "max-hp": "106" } },
-    { "num": "025", "name": "pikachu", "type": ["electric"], "stats": { "max-cp": "938", "max-hp": "99" } },
-    { "num": "148", "name": "dragonair", "type": ["dragon"], "stats": { "max-cp": "1780", "max-hp": "135" } }];
   //c.2 Lo que hará  la función, ordenar los pokemos por cp.
   it('Order Pokemons by CP', () => {
     //c.3 función con sus parámetros.igual(lo que devolverá cuando se cumpla la condición de la función)
@@ -65,8 +69,6 @@ describe('sortOrderPoke', () => {
     ]);
   });
   //d.1 crear el arreglo de prueba
-  const Pokis1 = [
-    { "num": "001", "name": "bulbasaur", "type": ["grass", "poison"], "stats": { "max-cp": "1115", "max-hp": "113" } }]
   // d.2 Lo que hará  la función, si el arreglo tiene un elemento.
   it('Order Pokemons if the array has 1 element', () => {
     //d.3función, entonces devolverá ese elemento.
@@ -74,21 +76,28 @@ describe('sortOrderPoke', () => {
       { "num": "001", "name": "bulbasaur", "type": ["grass", "poison"], "stats": { "max-cp": "1115", "max-hp": "113" } }
     ]);
   });
-
-  //e.
-
-
 });
 
-
-
-/*
-describe('anotherExample', () => {
+describe('Función de Búsqueda', () => {
+  it('exist', () => {
+    expect(filterNamePoke).toBeTruthy();
+  });
+  //b.función sea una función
   it('is a function', () => {
-    expect(typeof anotherExample).toBe('function');
+    expect(typeof filterNamePoke).toBe('function');
   });
-
-  it('returns `anotherExample`', () => {
-    expect(anotherExample()).toBe('OMG');
-  });
-});*/
+  //c. Respuesta correcta
+  //c.1 Crear el arreglo a testear
+  //c.2 Lo que hará  la función, filtrar pokémon por nombre.
+  it('Filtrar pokémon por nombre', () => {
+    expect(filterNamePoke(Pokis, "spearow")).toEqual([
+      { "num": "021", "name": "spearow", "type": ["normal", "flying"], "stats": { "max-cp": "798", "max-hp": "106" } }])
+  })
+  it('Filtrar pokémones al dejar campo vacío', () => {
+    expect(filterNamePoke(Pokis, '')).toBeNull([
+      { "num": "001", "name": "bulbasaur", "type": ["grass", "poison"], "stats": { "max-cp": "1115", "max-hp": "113" } },
+      { "num": "021", "name": "spearow", "type": ["normal", "flying"], "stats": { "max-cp": "798", "max-hp": "106" } },
+      { "num": "025", "name": "pikachu", "type": ["electric"], "stats": { "max-cp": "938", "max-hp": "99" } },
+      { "num": "148", "name": "dragonair", "type": ["dragon"], "stats": { "max-cp": "1780", "max-hp": "135" } }])
+  })
+});

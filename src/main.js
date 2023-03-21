@@ -111,4 +111,3 @@ btnSearch.addEventListener('click', () => {
 
 //Eventos del DOM
 btnAll.addEventListener('click',showAll); 
-console.log(data.pokemon)
