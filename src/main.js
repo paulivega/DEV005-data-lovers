@@ -4,7 +4,6 @@ import {sortOrderPoke} from './data.js';
 import { filterNamePoke } from './data.js';
 import { calculate } from './data.js';
 import data from './data/pokemon/pokemon.js';
-
 //elementos del DOM
 const btnAll = document.getElementById('btnAll');
 const typesPokes = document.getElementById('typesPokemon');
@@ -15,7 +14,6 @@ const quantify = document.getElementById('quantify')
 //Variables que interactuan con las funciones
 const allPokemons = data.pokemon;
 const containerCards = document.getElementById('root');
-
 //Funciones que interactúan con el DOM
 //Función que crea las cards
 const card = (pokes) => {
@@ -86,17 +84,16 @@ const card = (pokes) => {
     card.insertBefore (powers, powersIcons);
   }
 };
-
 //Función para mostrar todos los Pokemons
 const showAll=() => {
   containerCards.innerHTML = '';
   card(allPokemons);
   quantify.style.display = 'none';
-  
 }
 //Función evento selección Tipo Pokemon
 typesPokes.addEventListener('change', () => {
-  const pokeFilter = filterTypePoke(allPokemons, typesPokes.value); //Variable que llama a función 'filterTypePoke' con argumentos y filtra según el seleccionado 'typesPokes'
+  //Variable que llama a función 'filterTypePoke' con argumentos y filtra según el seleccionado 'typesPokes'
+  const pokeFilter = filterTypePoke(allPokemons, typesPokes.value); 
   containerCards.innerHTML = ''; //se creo variable 'containerCards' para capturar 'root'
   card(pokeFilter);
   quantify.innerHTML = ('Pokémones by type '+ typesPokes.value+' = ' + calculate(pokeFilter)+ '%.');
@@ -112,11 +109,12 @@ orderPokes.addEventListener('change', () => {
 });
 //Función evento selección Pokemon nombre
 btnSearch.addEventListener('click', () => {
-  const pokeName = filterNamePoke(allPokemons, inputSearch.value.toLowerCase()); //Variable que llama a función 'filterTypePoke' con argumentos y filtra según el seleccionado 'typesPokes'
-  containerCards.innerHTML = ''; //se creo variable 'containerCards' para capturar 'root'
+  //Variable que llama a función 'filterTypePoke' con argumentos y filtra según el pokémon que manualmente ingresa el usuario
+  const pokeName = filterNamePoke(allPokemons, inputSearch.value.toLowerCase()); 
+  //Se deja vacio containerCards que funciona para borrar información anterior
+  containerCards.innerHTML = ''; 
   card(pokeName);
   quantify.innerHTML = '';
 });
-
 //Eventos del DOM
 btnAll.addEventListener('click',showAll); 
