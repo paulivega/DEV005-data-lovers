@@ -93,6 +93,21 @@ option {
     background-color: #FFFFFF;
     color: black;
 }
+
+.counterContainer { 
+    display: flex;
+    border: 2px solid rgb(128, 0, 255);
+    width: 100%;
+    justify-content: center;
+}
+
+#quantify {  
+    margin-top: 1em;
+    border: 2px solid yellow;
+    font-size: 25px;
+    display: flex;
+    justify-content: center;  
+}
 footer {
     width: 100%;
     font-size: 18px;

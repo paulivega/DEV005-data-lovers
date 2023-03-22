@@ -24,7 +24,6 @@ export const filterNamePoke = (a,selectName) => {
   return filterName;
 };
 
-
 //Función calcular porcentaje de pokemones por tipo.
 export const calculate = (array) => {
   //numero inicial sea 0
