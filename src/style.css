@@ -59,8 +59,7 @@ option {
     width: 7em;
     height:0.5em;
     background-color: #EF0C3D;
-    font-size:16px;
-    
+    font-size:16px;   
 }
 .search {
     height: 40px;
@@ -93,13 +92,11 @@ option {
     background-color: #FFFFFF;
     color: black;
 }
-
 .counterContainer { 
     display: flex;
     width: 100%;
     justify-content: center;
 }
-
 #quantify {  
     margin-top: 1em;
     font-size: 20px;
@@ -143,7 +140,6 @@ footer {
     justify-content: space-around;
 }
 .hitsP {
-    
     font-size: 20px;
     font-weight: bold;
     color: rgb(39, 124, 13);
@@ -180,7 +176,6 @@ div {
     justify-content: center;
     align-items: center;
 }
-
 .powers {
     font-size: 20px;
     font-weight: bold;
@@ -195,7 +190,7 @@ div {
     justify-content: center;
     align-items: center;
 }
-/*Resolución tablet 768 - 1024*/
+/*Resolución tablet 768 - 1023*/
 @media screen and (min-width: 768px) and (max-width: 1023px){
     body {
         margin: 0.5em 0 0.5em 0;
@@ -312,4 +307,3 @@ div {
         width: 3em;
     }
 }
-
