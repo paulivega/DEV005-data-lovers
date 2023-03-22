@@ -90,7 +90,9 @@ const card = (pokes) => {
 //Función para mostrar todos los Pokemons
 const showAll=() => {
   containerCards.innerHTML = '';
-  card(allPokemons)
+  card(allPokemons);
+  quantify.style.display = 'none';
+  
 }
 //Función evento selección Tipo Pokemon
 typesPokes.addEventListener('change', () => {
@@ -98,20 +100,22 @@ typesPokes.addEventListener('change', () => {
   containerCards.innerHTML = ''; //se creo variable 'containerCards' para capturar 'root'
   card(pokeFilter);
   quantify.innerHTML = ('Pokémones by type '+ typesPokes.value+' = ' + calculate(pokeFilter)+ '%.');
-  console.log(calculate(pokeFilter));
+  quantify.style.display = 'block';
 });
 //Función evento selección Orden por CP Y HP Pokemon
 orderPokes.addEventListener('change', () => {
   const pokeOrder = sortOrderPoke(allPokemons, orderPokes.value); //Variable que llama a función 'sortOrderPoke' con argumentos y realiza sort según valores cp y hp.
   containerCards.innerHTML = ''; //se creo variable 'containerCards' para capturar 'root'
   card(pokeOrder);
+  quantify.style.display = 'none';
+  //quantify.innerHTML = '';
 });
 //Función evento selección Pokemon nombre
 btnSearch.addEventListener('click', () => {
   const pokeName = filterNamePoke(allPokemons, inputSearch.value.toLowerCase()); //Variable que llama a función 'filterTypePoke' con argumentos y filtra según el seleccionado 'typesPokes'
   containerCards.innerHTML = ''; //se creo variable 'containerCards' para capturar 'root'
   card(pokeName);
-  
+  quantify.innerHTML = '';
 });
 
 //Eventos del DOM

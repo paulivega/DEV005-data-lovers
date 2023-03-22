@@ -1,4 +1,4 @@
-import { sortOrderPoke, filterTypePoke, filterNamePoke } from '../src/data.js';
+import { sortOrderPoke, filterTypePoke, filterNamePoke, calculate } from '../src/data.js';
 //Array 4 elements
 const Pokis = [
   { "num": "001", "name": "bulbasaur", "type": ["grass", "poison"], "stats": { "max-cp": "1115", "max-hp": "113" } },
@@ -103,3 +103,15 @@ describe('filterNamePoke', () => {
     expect(filterNamePoke(Pokis, "SPEAROW")).toEqual([])
   })
 });
+
+describe('calculate', () => {
+  it('The function exist', () => {
+    expect(calculate).toBeTruthy();
+  })
+  it('Is a function', () => {
+    expect(typeof calculate).toBe('function');
+  });
+  it('Calculate percentage by type',() => {
+    expect(calculate(Pokis)).toEqual(25);
+  })
+})
