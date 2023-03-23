@@ -109,9 +109,9 @@ describe('filterNamePoke', () => {
     expect(filterNamePoke(Pokis, "SPEAROW")).toEqual([])
   })
 });
-
+//Test función calcular
 describe('calculate', () => {
-  
+  //Función existe
   it('The function exist', () => {
     expect(calculate).toBeTruthy();
   })
