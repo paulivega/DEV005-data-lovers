@@ -68,11 +68,14 @@ option {
     display: flex;
     align-items: center;
 }
+label {
+    display: none;
+}
 .search input {
     color: #19054C;
     font-weight: bold;
     width: 15em;
-    height: 1.7em;
+    height: 1.75em;
     border: 2px solid black;
     border-radius: 0.3em 0 0 0.3em;
     font-size: 20px;
@@ -129,7 +132,6 @@ footer {
     padding: 15px 0 5px 15px;
     display: flex;
     flex-direction: column;
-    cursor: pointer;
 }
 .image {
     width: 180px;
