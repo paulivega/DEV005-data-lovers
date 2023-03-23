@@ -41,7 +41,7 @@ Nuestro producto es adaptable tanto para vistas desktop, tablet y móvil.
 
 ![Test](src\img\test.jpg)
 
-# listado de problemas que detectamos a través de tests de usabilidad:
+## listado de problemas que detectamos a través de tests de usabilidad:
 
 * Funcionalidad:
 
@@ -62,3 +62,5 @@ Nuestro producto es adaptable tanto para vistas desktop, tablet y móvil.
 #Aumento del gap de las cards: Al estar los elementos muy juntos, se pierde la lectura de la información por lo cual se aumenta el gap entre ellas.
 
 #Vista de móviles y tablet: se nos desbordaban las imágenes y la barra de navegación cuando se usaba la aplicación en dispositivos más pequeños que el computador.
+
+#Select: Diferencias de visibilidad en equipos con sistema operativo IOS y Windows.
