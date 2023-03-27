@@ -96,7 +96,7 @@ typesPokes.addEventListener('change', () => {
   const pokeFilter = filterTypePoke(allPokemons, typesPokes.value); 
   containerCards.innerHTML = ''; //se creo variable 'containerCards' para capturar 'root'
   card(pokeFilter);
-  quantify.innerHTML = ('Pokémones by type '+ typesPokes.value+' = ' + calculate(pokeFilter)+ '%.');
+  quantify.innerHTML = ('Pokémones by type '+ typesPokes.value+' = ' + calculate(pokeFilter,allPokemons)+ '%.');
   quantify.style.display = 'block';
 });
 //Función evento selección Orden por CP Y HP Pokemon
